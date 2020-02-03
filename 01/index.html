@@ -9,14 +9,81 @@
 
   <style>
     /* Add your styles here :) */
+    div{}
+    figure {
+      display: inline-block;
+      float: left;
+      width:25%;
+      
+      }
+      .grid-container figure{
+        opacity: 0;
+      }
+    .row::after {
+      content: "";
+      clear: both;
+      display: table}
+    figcaption {
+      height: 125px;
+      padding-top: 0;
+      background-color: #79878b;
+      color:#fff;
+      }
+    a{
+      text-decoration: none;
+      color:#fff;}
+    
+    img{
+      width: 100%;
+      padding-bottom: 0px;}
+    
+    @keyframes fadeseq{
+      from {padding-top: 100px;}
+      to{padding-top: 0px;}
+      100% {opacity:1;}
+    }
+    .grid-container figure{
+      opacity:0;
+      animation: fadeseq 2s forwards;
+    }
+    #fig1{
+      animation-delay: .5s;
+      -moz-animation-delay: .5s;
+      -webkit-animation-delay: .5s;
+    }
+    #fig2{
+      animation-delay: 1.0s;
+      -moz-animation-delay: 1s;
+      -webkit-animation-delay: 1s;
+    }
+    #fig3{
+      animation-delay: 1.5s;
+      -moz-animation-delay: 1.5s;
+      -webkit-animation-delay: 1.5s;
+    }
+    #fig4{
+      animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+    }
+    #fig5{
+      animation-delay: 2.5s;
+      -moz-animation-delay: 2.5s;
+      -webkit-animation-delay: 2.5s;
+    }
+    #fig6{
+      animation-delay: 3s;
+      -moz-webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+    }
   </style>
 
 </head>
 
 <body>
   <div class="grid-container">
-
-    <figure>
+    <div id='row1' class='row'>
+    <figure id='fig1'>
       <img src="img/01.jpg">
       <figcaption>
         <h2>Johnson Controls</h2>
@@ -25,7 +92,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id='fig2'>
       <img src="img/02.jpg">
       <figcaption>
         <h2>Rockwell Collins</h2>
@@ -34,7 +101,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id='fig3'>
       <img src="img/03.jpg">
       <figcaption>
         <h2>Dana Holding</h2>
@@ -42,8 +109,9 @@
         <a href="#">View more</a>
       </figcaption>
     </figure>
-
-    <figure>
+    </div>
+    <div id='row2' class='row'>
+    <figure id='fig4'>
       <img src="img/04.jpg">
       <figcaption>
         <h2>Wells Fargo</h2>
@@ -52,7 +120,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id='fig5'>
       <img src="img/05.jpg">
       <figcaption>
         <h2>AK Steel Holding</h2>
@@ -61,7 +129,7 @@
       </figcaption>
     </figure>
 
-    <figure>
+    <figure id='fig6'>
       <img src="img/06.jpg">
       <figcaption>
         <h2>Baker Hughes</h2>
@@ -69,6 +137,7 @@
         <a href="#">View more</a>
       </figcaption>
     </figure>
+    </div>
 
   </div>
 </body>
